@@ -7,20 +7,21 @@
         public function setChan($chan){
             $this->chan = $chan;
         }
-        public function an(){
-            echo "an bang mom";
-        }
         public function setTay($tay){
         
             $this->tay =$tay;
         }
+        public function an(){
+            echo "an bang mom";
+        }
+       
     }
     class nguoiLon extends conNguoi{
    
         public $longNach;
         
         public function di(){
-            echo "di bang:".$this->chan." chan.";
+            echo "di bang:".$this->chan."chan";
         }
        
         public function noi(){
