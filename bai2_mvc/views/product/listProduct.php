@@ -28,7 +28,9 @@
             <td><?= $value['id']?></td>
             <td><?= $value['ten_sp']?></td>
             <td><?= $value['gia']?></td>
-            <td><a href="?url=remove-product&id=<?= $value['id'];?>">Xóa</a></td>
+            <td><a href="?url=remove-product&id=<?= $value['id'];?>">Xóa</a>
+            <a href="?url=update-product&id=<?= $value['id']?>">sửa</a>
+        </td>
            
         </tr>
         <?php }?>

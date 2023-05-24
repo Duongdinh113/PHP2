@@ -1,5 +1,6 @@
 <?php
     require_once "models/db.php";
+    class Poduct{
     // xây dựng hàm truy vấn lấy danh sách product
     function getProduct(){
         $sql = "SELECT * FROM product";
@@ -16,4 +17,5 @@
         //   var_dump($sql);die;
         getData($sql, false);
     }
+}
 ?>

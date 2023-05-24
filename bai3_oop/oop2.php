@@ -39,6 +39,7 @@
       
     }
     // khởi tạo đối tượng
+    // $CN = new conNguoi();
     $NL = new nguoiLon();
     $NL->an();
     echo "<pre>";
