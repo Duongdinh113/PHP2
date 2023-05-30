@@ -1,4 +1,4 @@
-<?php 
+<?php
     // khai báo 1 class trìu tượng
     abstract class DongVat{
         // khai báo phương thức trìu tượng

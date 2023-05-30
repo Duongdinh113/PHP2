@@ -13,7 +13,7 @@
     }
     
 </style>
-<body class="">
+<body class="pl-[600px]">
 
 <input type="button" id="btn2" value="thêm"/>
     <table class="w-[300px]">
@@ -28,8 +28,8 @@
             <td><?= $value['id']?></td>
             <td><?= $value['ten_sp']?></td>
             <td><?= $value['gia']?></td>
-            <td><a href="?url=remove-product&id=<?= $value['id'];?>">Xóa</a>
-            <a href="?url=update-product&id=<?= $value['id']?>">sửa</a>
+            <td><a  onclick="return confirm('Bạn có chắc muốn xóa')" href="?url=remove-product&id=<?= $value['id'];?>">Xóa</a>
+            <a href="?url=edit-product&id=<?= $value['id']?>">sửa</a>
         </td>
            
         </tr>
