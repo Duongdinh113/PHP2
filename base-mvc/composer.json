@@ -1,0 +1,13 @@
+{
+    "name": "dell/base-mvc",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [{
+        "name": "Duongdinh113",
+        "email": "122246359+Duongdinh113@users.noreply.github.com"
+    }],
+    "require": {}
+}

@@ -1,0 +1,16 @@
+{
+    "name": "aaa/bbb",
+    "autoload": {
+        "psr-4": {
+            "App\\": "./"
+        }
+    },
+
+    "authors": [{
+        "name": "Duongdinh113",
+        "email": "122246359+Duongdinh113@users.noreply.github.com"
+    }],
+
+    "require": {}
+
+}
