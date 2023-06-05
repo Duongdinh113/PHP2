@@ -9,5 +9,9 @@
         "name": "Duongdinh113",
         "email": "122246359+Duongdinh113@users.noreply.github.com"
     }],
-    "require": {}
+    "require": {
+        "illuminate/events": "^10.13",
+        "eftec/bladeone": "^4.9",
+        "phroute/phroute": "^2.2"
+    }
 }
