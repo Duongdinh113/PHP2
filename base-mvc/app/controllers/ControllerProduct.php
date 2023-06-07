@@ -1,7 +1,7 @@
 <?php
     namespace App\Controllers;
     use App\Models\Product;
-    class Controller1 extends BaseController{
+    class ControllerProduct extends BaseController{
         public $product; // tạo thuộc tính
         public function __construct()
         {
@@ -15,10 +15,9 @@
             return $this->render('product.index', compact('products')); // ['ten'=>$products]
             // die;
         }
-        public function detail($id,$haha){
-            echo $id."-".$haha;
-            die;
-        }
+        // public function EditAdd($id,$haha){
+        //     return $this->render('product.editAdd'); // ['ten'=>$products]
+        // }
     }
     
 ?>

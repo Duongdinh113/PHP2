@@ -4,21 +4,19 @@
     <tr>
         <td>id</td>
         <td>tên sản phẩm</td>
-        <td>giá</td>
+       
     </tr>
+    <a href="?url=editAdd">thêm sản phẩm</a>
+        @foreach ($categoris as $pr)
     <tr>
-        <a href="?url=editAdd">thêm sản phẩm</a>
-        @foreach ($products as $pr)
+       
         <td>
            {{$pr->id}}
         </td>
         <td>
-        {{$pr->ten_sp}}
+        {{$pr->name}}
         </td>
-        <td>
-        {{$pr->gia}}
-        </td>
-        @endforeach
     </tr>
+    @endforeach
 </table>
 @endsection

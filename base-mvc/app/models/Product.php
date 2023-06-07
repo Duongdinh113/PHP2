@@ -8,6 +8,9 @@
             $this->setQuery($sql);
             return $this->loadAllRows(); // lấy tất cả
         }
+        public function EditAdd(){
+    
+        }
           // xây dựng hàm thêm sản phẩm
         public function addProduct($id,$tenSp,$gia){
             $sql = "INSERT INTO $this->table values (?,?,?)";
