@@ -6,9 +6,9 @@
         <td>tên sản phẩm</td>
         <td>giá</td>
     </tr>
+    <a href="{{BASE_URL.'add-Product'}}">thêm sản phẩm</a>
+    @foreach ($products as $pr)
     <tr>
-        <a href="?url=editAdd">thêm sản phẩm</a>
-        @foreach ($products as $pr)
         <td>
            {{$pr->id}}
         </td>
@@ -18,7 +18,8 @@
         <td>
         {{$pr->gia}}
         </td>
-        @endforeach
+       
     </tr>
+    @endforeach
 </table>
 @endsection

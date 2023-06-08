@@ -1,0 +1,14 @@
+<?php $_shouldextend[1]=1; ?>
+<?php $this->startSection('content'); ?>
+<form action="">
+ <table>
+ 
+ <input placeholder="" type="text" name="" id="">
+ <input placeholder="nhap ten" type="text" name="" id="">
+ <input placeholder="gia" type="text" name="" id="">
+
+ </table>
+ </form>
+
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layout.main'); } ?>

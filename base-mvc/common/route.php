@@ -20,9 +20,17 @@ $router->filter('auth', function(){
 $router->get('/', function(){
     return "trang chủ";
 });
-$router->get('list-product',[App\Controllers\ControllerProduct::class,'index']);
+
 $router->get('list-category',[App\Controllers\CategoriController::class,'index']);
+
 $router->get('list-comment',[App\Controllers\CommentController::class,'index']);
+
+$router->get('list-product',[App\Controllers\ControllerProduct::class,'index']);
+
+$router->get('add-Product',[App\Controllers\ControllerProduct::class,'addProduct']);
+
+$router->post('post-Product',[App\Controllers\ControllerProduct::class,'postProduct']);
+
 $router->get('detail-product/{id}/{haha}',[App\Controllers\Controller1::class,'detail']);
 
 
