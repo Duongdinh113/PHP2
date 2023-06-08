@@ -25,8 +25,8 @@
             //        echo 123;
                     // khi người dùng kích vào nút
                     if(isset($_POST['nut'])) {
-                        //validate
-                        //tạo ra 1 mảng lỗi error
+                        // validate
+                        // tạo ra 1 mảng lỗi error
                         $errors = [];
                         // nếu như bỏ trống tên SP
                         if (empty($_POST['ten_sp'])) {

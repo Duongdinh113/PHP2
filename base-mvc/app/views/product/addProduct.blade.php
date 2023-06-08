@@ -10,7 +10,7 @@
     @if(isset($_SESSION['success']) && isset($_GET['msg']) )
         <span style="color: green">{{ $_SESSION['success'] }}</span>
     @endif
-    <form action="{{ BASE_URL.'post-Product' }}" method="post">
+    <form action="{{ BASE_URL.'post-Product'}}" method="post">
     <table>
         <tr>
             <td>Tên sản phẩm</td>

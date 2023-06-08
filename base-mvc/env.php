@@ -19,4 +19,4 @@ function redirect($key,$msg,$router){
             break;
     }
     header('location:'.BASE_URL.$router."?msg=".$key);die;
-}
+}   

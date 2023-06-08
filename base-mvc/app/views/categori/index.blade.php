@@ -6,7 +6,7 @@
         <td>tên sản phẩm</td>
        
     </tr>
-    <a href="?url=editAdd">thêm sản phẩm</a>
+    <a href="{{BASE_URL.'add-category'}}">thêm sản phẩm</a>
         @foreach ($categoris as $pr)
     <tr>
        

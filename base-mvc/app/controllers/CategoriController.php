@@ -15,7 +15,37 @@
     
             return $this->render('categori.index', compact('categoris')); // ['ten'=>$products]
         }
+         public function addCategory(){
+            return $this->render('categori.add');die;
+            // echo 123;
             
-      
+         }   
+         public function postCategory(){
+            if(isset($_POST['btn'])) {
+                 //validate
+                        // tạo ra 1 mảng lỗi error
+                        $errors = [];
+                        // nếu như bỏ trống tên SP
+                      
+                        // nếu như bỏ trống đơn giá
+                        if (empty($_POST['name'])) {
+                            $errors[] = "Bạn không được bỏ trống ten loai";
+                        }
+                        if (count($errors) > 0 ) { // có lỗi
+                            //push mảng lỗi này vào trong session
+            //                $_SESSION['errors'] = $errors;
+            //                // nhảy về trang add-product
+            //                header('location:'.BASE_URL.'add-product');die;
+                            redirect('errors',$errors,'add-category');
+                        } else {
+            $result = $this->categori->addCategory(NULL,$_POST['name']);
+            if($result){
+                // redirect('success',"Thêm sản phẩm thành công",'add-category');
+                // header('location:'.BASE_URL.'add-categoryd');die;
+                redirect('success',"Thêm sản phẩm thành công",'add-category');
+                }
+            }
+         }
     }
+}
 ?>

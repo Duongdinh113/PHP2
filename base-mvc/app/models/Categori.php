@@ -7,5 +7,10 @@
             $this->setQuery($sql);
             return $this->loadAllRows();
         }
+        public function addCategory($id,$name){
+            $sql="INSERT INTO $this->table values (?,?)";
+            $this->setQuery($sql);
+            return $this->execute([$id,$name]);
+        }
     }
 ?>
