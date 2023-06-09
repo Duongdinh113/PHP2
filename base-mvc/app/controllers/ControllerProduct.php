@@ -19,7 +19,7 @@
         //     return $this->render('product.editAdd'); // ['ten'=>$products]
         // }
         public function addProduct(){
-            return $this->render('product.addProduct');
+            return $this->render('product.add');
         }
         public function postProduct() {
             //        echo 123;

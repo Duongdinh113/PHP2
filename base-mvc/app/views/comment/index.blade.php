@@ -6,7 +6,7 @@
         <td>tên sản phẩm</td>
        
     </tr>
-    <a href="?url=editAdd">thêm sản phẩm</a>
+    <a href="{{BASE_URL.'add-comment'}}">thêm sản phẩm</a>
         @foreach ($comments as $pr)
     <tr>
        
