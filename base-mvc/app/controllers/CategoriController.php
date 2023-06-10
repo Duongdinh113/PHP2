@@ -16,10 +16,11 @@
             return $this->render('categori.index', compact('categoris')); // ['ten'=>$products]
         }
          public function addCategory(){
-            return $this->render('categori.add');die;
+            return $this->render('categori.add');
             // echo 123;
             
-         }   
+         }  
+        
          public function postCategory(){
             if(isset($_POST['btn'])) {
                  //validate
@@ -43,9 +44,23 @@
                 // redirect('success',"Thêm sản phẩm thành công",'add-category');
                 // header('location:'.BASE_URL.'add-categoryd');die;
                 redirect('success',"Thêm sản phẩm thành công",'add-category');
+                    }
                 }
             }
-         }
+        }
+        public function editCategory($id){
+            // echo 123;
+            $category = $this->categori->detailCategory($id);
+            return $this->render('categori.edit',compact('category'));
+        } 
+        public function updateCategory($id){
+            // echo 123;
+            if(isset($_POST['btn'])){
+            $result = $this->categori->updateCategory($id,$_POST['name']);
+            if($result){
+                redirect('success','sửa thành công','edit-category/'.$id);
+            }
+            }
+        }
     }
-}
 ?>

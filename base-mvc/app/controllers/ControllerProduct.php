@@ -15,9 +15,11 @@
             return $this->render('product.index', compact('products')); // ['ten'=>$products]
        
         }
-        // public function EditAdd($id,$haha){
-        //     return $this->render('product.editAdd'); // ['ten'=>$products]
-        // }
+        public function detail($id){
+            $product = $this->product->editUpdate($id);
+            return $this->render('product.edit',compact('product')); // ['ten'=>$products]
+
+        }
         public function addProduct(){
             return $this->render('product.add');
         }
@@ -51,7 +53,21 @@
                             }
                         }
                     }
+         }
+         public function editProduct($id){
+            if(isset($_POST['nut'])){
+                $result = $this->product->updeteProduct($id,$_POST['ten_sp'],$_POST['don_gia']);
+              if($result){
+                redirect('success',"Sửa sản phẩm thành công",'detail-product/'.$id);
+              }
             }
-        
+        } 
+        public function delete($id){
+                $result = $this->product->deleteProduct($id);
+              if($result){
+                redirect('success',"xoa thanh cong",'list-product');
+              }
+            
+        }
     }
 ?>

@@ -16,6 +16,10 @@
         <td>
         {{$pr->name}}
         </td>
+        <td>
+            <a href="{{route("edit-category/".$pr->id)}}">cập nhật</a>
+            <a href="">xóa</a>
+        </td>
     </tr>
     @endforeach
 </table>

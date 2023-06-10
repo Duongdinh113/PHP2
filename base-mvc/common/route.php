@@ -24,6 +24,8 @@ $router->get('/', function(){
 $router->get('list-category',[App\Controllers\CategoriController::class,'index']);
 $router->get('add-category',[App\Controllers\CategoriController::class,'addCategory']);
 $router->post('post-category',[App\Controllers\CategoriController::class,'postCategory']);
+$router->get('edit-category/{id}',[App\Controllers\CategoriController::class,'editCategory']);
+$router->post('update-category/{id}',[App\Controllers\CategoriController::class,'updateCategory']);
 // comment
 $router->get('list-comment',[App\Controllers\CommentController::class,'index']);
 $router->get('add-comment',[App\Controllers\CommentController::class,'addComment']);
@@ -32,7 +34,9 @@ $router->post('post-comment',[App\Controllers\CommentController::class,'postComm
 $router->get('list-product',[App\Controllers\ControllerProduct::class,'index']);
 $router->get('add-Product',[App\Controllers\ControllerProduct::class,'addProduct']);
 $router->post('post-Product',[App\Controllers\ControllerProduct::class,'postProduct']);
-$router->get('detail-product/{id}/{haha}',[App\Controllers\Controller1::class,'detail']);
+$router->get('detail-product/{id}',[App\Controllers\ControllerProduct::class,'detail']);
+$router->post('edit-product/{id}',[App\Controllers\ControllerProduct::class,'editProduct']);
+$router->get('delete-product/{id}',[App\Controllers\ControllerProduct::class,'delete']);
 
 
 // $router->get('test', [App\Controllers\ProductController::class, 'index']);

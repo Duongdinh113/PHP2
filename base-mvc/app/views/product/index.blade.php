@@ -7,12 +7,20 @@
         <td>tên sản phẩm</td>
         <td>giá</td>
     </tr>
-    <a href="{{BASE_URL.'add-Product'}}">thêm sản phẩm</a>
-    
+    <a href="{{BASE_URL.'add-Product'}}">thêm sản phẩm</a><br>
+    <!-- @if(isset($_SESSION['errors']) && isset($_GET['msg']))
+        <ul>
+            @foreach($_SESSION['errors'] as $error)
+            <li style="color: red">{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif -->
+    @if(isset($_SESSION['success']) && isset($_GET['msg']) )
+        <span style="color: green">{{ $_SESSION['success'] }}</span>
+    @endif
     @foreach ($products as $pr)
    
     <tr>
-    
         <td>{{$i}}</td>
         <td>
            {{$pr->id}}
@@ -22,7 +30,10 @@
         </td>
         <td>
         {{$pr->gia}}
-   
+        </td>
+        <td>
+            <a href="{{route("detail-product/".$pr->id)}}">cập nhật</a>
+            <a onclick="return confirm('ban co muon xoa khong')" href="{{ route('delete-product/'.$pr->id) }}">xóa</a>
         </td>
     
     </tr>

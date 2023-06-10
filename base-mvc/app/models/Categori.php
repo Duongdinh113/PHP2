@@ -12,5 +12,15 @@
             $this->setQuery($sql);
             return $this->execute([$id,$name]);
         }
+        public function detailCategory($id){
+            $sql = "SELECT * FROM $this->table WHERE id = ?";
+            $this->setQuery($sql);
+            return $this->loadRow([$id]);
+        }
+        public function updateCategory($id,$name){
+            $sql = "UPDATE $this->table set name = ? WHERE id = ?";
+            $this->setQuery($sql);
+            return $this->execute([$name,$id]);
+        }
     }
 ?>

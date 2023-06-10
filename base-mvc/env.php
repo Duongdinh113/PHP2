@@ -7,7 +7,9 @@ const DBPASS = "";
 const DBCHARSET = "utf8";
 const DBHOST = "127.0.0.1";
 const BASE_URL ="http://localhost/PHP2/base-mvc/";
-
+function route($url) {
+    return BASE_URL.$url;
+}
 function redirect($key,$msg,$router){
     $_SESSION[$key] = $msg;
     switch($key){
