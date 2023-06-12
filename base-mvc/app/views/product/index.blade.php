@@ -13,7 +13,7 @@
         <td>giá</td>
         <td></td>
     </tr>
-    <a href="{{BASE_URL.'add-Product'}}">thêm sản phẩm</a><br>
+    <a href="{{BASE_URL.'add-Product'}}"><button>thêm sản phẩm</button></a><br>
     <!-- @if(isset($_SESSION['errors']) && isset($_GET['msg']))
         <ul>
             @foreach($_SESSION['errors'] as $error)
@@ -38,8 +38,8 @@
         {{$pr->gia}}
         </td>
         <td>
-            <a href="{{route("detail-product/".$pr->id)}}">cập nhật</a>
-            <a onclick="return confirm('ban co muon xoa khong')" href="{{ route('delete-product/'.$pr->id) }}">xóa</a>
+            <a href="{{route("detail-product/".$pr->id)}}"><button>cập nhật</button></a>
+            <a onclick="return confirm('ban co muon xoa khong')" href="{{ route('delete-product/'.$pr->id) }}"><button>xóa</button></a>
         </td>
     
     </tr>

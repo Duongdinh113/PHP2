@@ -7,7 +7,7 @@
 </style>
 
   
-<a href="{{BASE_URL.'add-comment'}}">thêm sản phẩm</a><br>
+<a href="{{BASE_URL.'add-comment'}}"><button>thêm</button></a><br>
 @if(isset($_SESSION['status']))
     <span style="color: green;">{{$_SESSION['status']}}</span>
 @endif
@@ -42,8 +42,7 @@
                 <input onclick="confirm('bạn có muốn xác nhận đơn hàng này')" type="submit" value="xác nhận đơn" name="btn" id="">
             </form>
             <form action="">
-                <input hidden type="text" name="" value="hủy đơn" id="">
-                
+                <input hidden type="text" name="" value="hủy đơn" id="">             
                 <input type="submit" value="xác nhận huy" name="" id="">
             </form>
         </td>

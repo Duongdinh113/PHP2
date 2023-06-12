@@ -3,7 +3,7 @@
     class Comment extends BaseModel{
         protected $comment = "comment";
         public function getComment(){
-            $sql = "SELECT * FROM $this->comment";
+            $sql = "SELECT * FROM $this->comment ORDER BY id DESC";
             $this->setQuery($sql);
             return $this->loadAllRows();
         }

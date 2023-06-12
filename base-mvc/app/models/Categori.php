@@ -3,7 +3,7 @@
     class Categori extends BaseModel{
         protected $table = "category";
         public function getCategori(){
-            $sql = "SELECT * FROM $this->table";
+            $sql = "SELECT * FROM $this->table ORDER BY id DESC";
             $this->setQuery($sql);
             return $this->loadAllRows();
         }

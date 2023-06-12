@@ -7,6 +7,7 @@
 </style>
 
 <table>
+    <a href="{{BASE_URL.'add-category'}}"><button>thêm sản phẩm</button></a>
     <tr>
         <td>id</td>
         <td>tên sản phẩm</td>
@@ -17,7 +18,7 @@
     <span style="color: green">{{$_SESSION['success']}}</span><br>
     @endif
     
-    <a class="a" href="{{BASE_URL.'add-category'}}">thêm sản phẩm</a>
+    
         @foreach ($categoris as $pr)
     <tr>
        
@@ -28,8 +29,8 @@
         {{$pr->name}}
         </td>
         <td>
-            <a href="{{route("edit-category/".$pr->id)}}">cập nhật</a>
-            <a onclick="return confirm('bạn có muốn xóa không')" href="{{route('delete-category/'.$pr->id)}}">xóa</a>
+            <a href="{{route("edit-category/".$pr->id)}}"><button>cập nhật</button></a>
+            <a onclick="return confirm('bạn có muốn xóa không')" href="{{route('delete-category/'.$pr->id)}}"><button>xóa</button></a>
             <!-- {{ route('delete-product/'.$pr->id) }} -->
         </td>
     </tr>

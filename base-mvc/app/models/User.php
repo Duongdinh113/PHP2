@@ -3,7 +3,7 @@
     class User extends BaseModel{
         protected $table = "user";
       public function listUser(){
-        $sql ="SELECT * FROM $this->table";
+        $sql ="SELECT * FROM $this->table ORDER BY id DESC";
         $this->setQuery($sql);
         return $this->loadAllRows();
       }

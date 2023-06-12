@@ -9,7 +9,7 @@
         <span style="color: green">{{ $_SESSION['success'] }}</span>
     @endif
   
-<a href="{{BASE_URL.'add-comment'}}">thêm sản phẩm</a>
+<a href="{{BASE_URL.'add-comment'}}"><button>thêm comment</button></a>
 <table>
     <tr>
         <td>id</td>
@@ -28,8 +28,8 @@
         {{$pr->comment}}
         </td>
         <td>
-            <a href="{{route('edit-comment/'.$pr->id)}}">cập nhật</a>
-            <a onclick="return confirm('bạn có muốn xóa không')" href="{{route('delete-comment/'.$pr->id)}}">xóa</a>
+            <a href="{{route('edit-comment/'.$pr->id)}}"><button>cập nhật</button></a>
+            <a onclick="return confirm('bạn có muốn xóa không')" href="{{route('delete-comment/'.$pr->id)}}"><button>xóa</button></a>
         </td>
     </tr>
     @endforeach

@@ -3,7 +3,7 @@
     class Cart extends BaseModel{
         protected $table = "cart";
         public function list(){
-            $sql ="SELECT * FROM $this->table";
+            $sql ="SELECT * FROM $this->table ORDER BY id DESC";
             $this->setQuery($sql);
             return $this->loadAllRows();
         }

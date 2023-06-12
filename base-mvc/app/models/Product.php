@@ -4,7 +4,7 @@
     class Product extends BaseModel{
         protected $table = "product";
         public function getProduct(){
-            $sql = "SELECT * FROM $this->table";
+            $sql = "SELECT * FROM $this->table ORDER BY id DESC";
             $this->setQuery($sql);
             return $this->loadAllRows(); // lấy tất cả
         }
