@@ -32,5 +32,25 @@
                 }
             }
         }
+        public function editComment($id){
+            // echo 123;die;
+            $comment = $this->comment->edit($id);
+            return $this->render('comment.edit',compact('comment'));
+        }
+        public function updateComment($id){
+            if(isset($_POST['btn'])){
+                $result = $this->comment->update($id,$_POST['comment']);
+                if($result){
+                    redirect('success','cập nhật thành công','edit-comment/'.$id);
+                }
+            }
+        }
+        public function deleteComment($id){
+            // echo 123;
+            $result = $this->comment->delete($id);
+            if($result){
+                redirect('success','xóa thành công','list-comment');
+            }
+        }
     }
 ?>

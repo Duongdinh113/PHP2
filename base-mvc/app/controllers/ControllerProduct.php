@@ -49,7 +49,7 @@
                             if ($result)  {
             //                    $_SESSION['success'] = "Thêm sản phẩm thành công";
             //                    header('location:'.BASE_URL.'add-product');die;
-                             redirect('success',"Thêm sản phẩm thành công",'add-Product');
+                             redirect('success',"Thêm thành công",'add-Product');
                             }
                         }
                     }

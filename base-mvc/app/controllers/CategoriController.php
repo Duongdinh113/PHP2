@@ -62,5 +62,12 @@
             }
             }
         }
+        public function delete($id){
+            $result = $this->categori->deleteCategory($id);
+            var_dump($result);
+            if($result){
+                redirect('success',"xóa thành công",'list-category');
+            }
+        }
     }
 ?>

@@ -1,11 +1,17 @@
 @extends('layout.main')
 @section('content')
+<style>
+    tbody,tr,td{
+        border: 1px solid black;
+    }
+</style>
 <table>
     <tr>
-        <td>stt</td>
+        
         <td>id</td>
         <td>tên sản phẩm</td>
         <td>giá</td>
+        <td></td>
     </tr>
     <a href="{{BASE_URL.'add-Product'}}">thêm sản phẩm</a><br>
     <!-- @if(isset($_SESSION['errors']) && isset($_GET['msg']))
@@ -21,7 +27,7 @@
     @foreach ($products as $pr)
    
     <tr>
-        <td>{{$i}}</td>
+        
         <td>
            {{$pr->id}}
         </td>

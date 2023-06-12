@@ -12,5 +12,20 @@
             $this->setQuery($sql);
             return $this->execute([$id,$comment]);
         }
+        public function edit($id){
+            $sql = "SELECT * FROM $this->comment WHERE id = ?";
+            $this->setQuery($sql);
+            return $this->loadRow([$id]);
+        }
+        public function update($id,$comment){
+            $sql = "UPDATE  $this->comment set comment = ? WHERE id =?";
+            $this->setQuery($sql);
+            return $this->execute([$comment,$id]);
+        }
+        public function delete($id){
+            $sql ="DELETE FROM $this->comment WHERE id=?";
+            $this->setQuery($sql);
+            return $this->execute([$id]);
+        }
     }
 ?>

@@ -22,5 +22,10 @@
             $this->setQuery($sql);
             return $this->execute([$name,$id]);
         }
+        public function deleteCategory($id){
+            $sql = "DELETE FROM $this->table WHERE id = ?";
+            $this->setQuery($sql);
+            return $this->execute([$id]);
+        }
     }
 ?>

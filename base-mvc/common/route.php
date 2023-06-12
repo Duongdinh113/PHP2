@@ -26,10 +26,14 @@ $router->get('add-category',[App\Controllers\CategoriController::class,'addCateg
 $router->post('post-category',[App\Controllers\CategoriController::class,'postCategory']);
 $router->get('edit-category/{id}',[App\Controllers\CategoriController::class,'editCategory']);
 $router->post('update-category/{id}',[App\Controllers\CategoriController::class,'updateCategory']);
+$router->get('delete-category/{id}',[App\Controllers\CategoriController::class,'delete']);
 // comment
 $router->get('list-comment',[App\Controllers\CommentController::class,'index']);
 $router->get('add-comment',[App\Controllers\CommentController::class,'addComment']);
 $router->post('post-comment',[App\Controllers\CommentController::class,'postComment']);
+$router->get('edit-comment/{id}',[App\Controllers\CommentController::class,'editComment']);
+$router->post('update-comment/{id}',[App\Controllers\CommentController::class,'updateComment']);
+$router->get('delete-comment/{id}',[App\Controllers\CommentController::class,'deleteComment']);
 // product
 $router->get('list-product',[App\Controllers\ControllerProduct::class,'index']);
 $router->get('add-Product',[App\Controllers\ControllerProduct::class,'addProduct']);
@@ -37,7 +41,16 @@ $router->post('post-Product',[App\Controllers\ControllerProduct::class,'postProd
 $router->get('detail-product/{id}',[App\Controllers\ControllerProduct::class,'detail']);
 $router->post('edit-product/{id}',[App\Controllers\ControllerProduct::class,'editProduct']);
 $router->get('delete-product/{id}',[App\Controllers\ControllerProduct::class,'delete']);
-
+// user
+$router->get('list-user',[App\Controllers\UserController::class,'index']);
+$router->get('add-user',[App\Controllers\UserController::class,'addUser']);
+$router->post('post-user',[App\Controllers\UserController::class,'postUser']);
+$router->get('edit-user/{id}',[App\Controllers\UserController::class,'edit']);
+$router->post('update-user/{id}',[App\Controllers\UserController::class,'update']);
+$router->get('delete-user/{id}',[App\Controllers\UserController::class,'delete']);
+//cart
+$router->get('list-cart',[App\Controllers\CartController::class,'index']);
+$router->post('order-confirmation/{id}',[App\Controllers\CartController::class,'order']);
 
 // $router->get('test', [App\Controllers\ProductController::class, 'index']);
 
