@@ -1,5 +1,6 @@
 <?php 
 @session_start();
+//  unset($_SESSION['status']);
     require_once "env.php";
     require_once "vendor/autoload.php";
     require_once "common/route.php";

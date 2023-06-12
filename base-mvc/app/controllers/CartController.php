@@ -9,6 +9,9 @@
         }
         public function index(){
             // echo 123;die;
+            // if(isset($_SESSION['status'])){
+            //     unset($_SESSION['status']);
+            // }
             $carts = $this->cart->list();
             return $this->render('cart.index',compact('carts'));
         }
@@ -18,10 +21,11 @@
                 if($_POST['dxl'] == "đang xử lí"){
                     $result = $this->cart->order($id,$_POST['tc']);
                     if($result){
-                        header('location:'.BASE_URL.'list-cart');
+                        $_SESSION['status'] = "đơn đã được xác nhận";
+                        header('location:'.BASE_URL.'list-cart');die;
                     }
                 }else{
-                    $_SESSION['status'] = "đơn đã được sác nhận";
+                     unset($_SESSION['status']);
                     header('location:'.BASE_URL.'list-cart');
                 }
             }
